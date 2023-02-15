@@ -1,0 +1,323 @@
+.logo {
+    display: block;
+    font-size: 70px;
+    color: $color-primary;
+    border: 4px solid $color-primary;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    text-decoration: none;
+    @include flexlayout
+}
+
+.main-name {
+    font-family: $font-Marck;
+    font-size: 50px;
+    color: $color-secondary;
+    text-align: center;
+    @include textStyles(none);
+}
+
+.sub-name {
+    font-family: $font-Roboto;
+    font-size: 18px;
+    color: $color-secondary;
+    text-align: center;
+    @include textStyles;
+}
+
+.main-heading {
+    font-family: $font-Marck;
+    font-size: 100px;
+    font-weight: 300;
+    color: $color-primary;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 60px;
+        margin-bottom: 20px;
+
+
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+}
+
+.sub-heading {
+    font-family: $font-Roboto;
+    font-size: 60px;
+    font-weight: 300;
+    color: $color-secondary;
+    margin-bottom: 80px;
+    text-align: center;
+    @media screen and (max-width: 1000px) {
+        font-size: 37px;
+        margin-bottom: 10px;
+
+
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+.main-btn {
+    font-family: $font-Roboto;
+    height: 45px;
+    width: 200px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    color: $color-secondary;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.25s;
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-dark;
+    }
+    @media screen and (max-width: 400px) {
+        height: 35px;
+        width: 150px;
+
+        
+    }
+}
+
+.card {
+    width: 33.3333%;
+    height: 30vw;
+    position: relative;
+    overflow:hidden;
+
+
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+        
+    }
+    &:hover .card-overlay {
+        left: 0;
+    }
+
+    &-img {
+        @extend %fullSize;
+        object-fit: cover;
+    }
+
+    &-overlay {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background-color: rgba($color-primary, 0.5);
+        color:$color-white;
+        z-index: 10;
+        @include flexlayout;
+        flex-direction: column;
+        @extend %fullSize;
+        transition: left 0.5s;
+    }
+
+    &-overlay-heading {
+        font-family: $font-Raleway;
+        font-size: 50px;
+        @include textStyles(capitalize);
+        
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        
+    }
+    @media screen and (max-width: 500px) {
+        
+        font-size: 14px;
+        
+    }
+    }
+
+    &-overlay-paragraph {
+        
+        font-family: $font-Raleway;
+        font-size: 30px;
+        @include textStyles(capitalize);
+        margin: 30px;
+        
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+        margin: 15px;
+        
+    }
+    @media screen and (max-width: 500px) {
+        
+        font-size: 10px;
+        
+    }
+   }
+   &-overlay-btn {
+    width: 150px;
+    height: 40px;
+    color: $color-primary;
+    background-color: $color-white;
+    font-family: $font-Raleway;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid $color-primary;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    
+    @media screen and (max-width: 768px) {
+        width: 100px;
+        height: 33px;
+        font-size: 12px;
+        
+    }
+    @media screen and (max-width: 500px) {
+        width: 90px;
+        height: 30px;
+        font-size: 10px;
+        
+    }
+    
+   }
+}
+.footer {
+ 
+   position:relative;
+   @include flexlayout;
+   
+
+  
+   &-social-media {
+    position:relative;
+    right: 50%;
+    @media screen and (max-width: 1000px) {
+        position:relative;
+        left: 40%;
+        
+    }
+    @media screen and (max-width: 800px) {
+        position:relative;
+        left: 38%;
+        
+    }
+    @media screen and (max-width: 700px) {
+        position:relative;
+        left: 34%;
+        
+    }
+    
+
+    @media screen and (max-width: 423px) {
+        position:relative;
+        left: 30%;
+        
+    }
+    @media screen and (max-width: 370px) {
+        position:relative;
+        left: 28%;
+        
+    }
+    @media screen and (max-width: 356px) {
+        position:relative;
+        left: 25%;
+        
+    }
+    @media screen and (max-width: 337px) {
+        position:relative;
+        left: 22%;
+        
+    }
+   
+
+   }
+
+  &-copyright {
+    position:relative;
+    top:120px;
+    right:420px;
+    @media screen and (max-width: 800px) {
+        position:relative;
+        top:125px;
+        right:380px;
+        font-size:13px;
+        
+    }
+    @media screen and (max-width: 700px) {
+        position:relative;
+        top:130px;
+        right:330px;
+        font-size:12px;
+        
+    }
+    @media screen and (max-width: 600px) {
+        position:relative;
+        top:130px;
+        right:290px;
+        font-size:11px;
+        
+    }
+    @media screen and (max-width: 500px) {
+        position:relative;
+        top:130px;
+        right:240px;
+        font-size:11px;
+        
+    }
+    @media screen and (max-width: 440px) {
+        position:relative;
+        top:135px;
+        right:240px;
+        font-size:11px;
+        
+    }
+    @media screen and (max-width: 400px) {
+        position:relative;
+        top:135px;
+        right:220px;
+        font-size:9px;
+        
+    }
+    
+  }
+   
+
+    
+}
+.fab {
+    
+    padding: 10px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px;
+    border-radius: 25%;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  .fa-facebook-square {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-google-plus-square {
+    background: #dd4b39;
+    color: white;
+  }
+
+
+  

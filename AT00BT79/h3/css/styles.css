@@ -1,0 +1,33 @@
+body {
+  height: 100vh;
+  display: flex;
+  background-color: grey;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.4)), url(../images/background.jpg);
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+}
+
+.container-inner {
+  width: 302px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  color: #fff;
+}
+
+img {
+  margin: 40px auto;
+  display: block;
+  width: 300px;
+  height: 267px;
+  border: 1px solid black;
+}

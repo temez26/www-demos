@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaatiotehtävä</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0px;
+            animation: darkness 30s forwards;
+            
+        }
+        html {
+            overflow: visible;
+            height: 1700px;
+            
+            
+            background-color: aliceblue;
+            
+        }
+
+        .sky {
+            height: 75vh;
+            width: 100vw;
+            background-color: rgb(0, 247, 255);
+        }
+        
+        .container {
+            height: 1px;
+            width: 300px;
+            
+            position: relative;
+
+        }
+       
+        .block {
+            position: absolute; top: 63px;
+            bottom:100%;
+            left: 0;
+            right: 0;
+            
+            overflow: hidden;
+            width: 80%;
+            height:0;
+            transition: .5s ease;
+        }
+
+        .container:hover  .block{
+            
+            height: 300px;
+            width: 300px;
+        }
+        .coi {
+            color: rgb(0, 0, 0);
+            height: 1px;
+            width: 300px;
+            
+            text-align:center;
+            position: relative;
+            overflow: hidden;
+        }
+     
+        #tex1 {
+            width: 297.2px;
+            height: 50px;
+            border: 1.5px solid black;
+            text-align: center;
+            padding-top: 10px;
+        }
+        #tex2 {
+            width: 297.2px;
+            height: 50px;
+            border: 1.5px solid black;
+            text-align: center;
+            padding-top: 10px;
+        }
+        #tex3 {
+            width: 297.2px;
+            height: 50px;
+            border: 1.5px solid black;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        #koko {
+            padding-top: 20px;
+            height: 25vh;
+            width: 500px;
+            position: absolute; left: 800px;
+            
+          
+
+        }
+        #foxi {
+            position:relative;
+            
+      
+            
+            
+        }
+        #rabi {
+            position:relative; left: 330px; top: -20px;
+        }
+        #hedi{
+            position: relative; left: 660px; top: -40px;
+            
+        }
+        
+        #fox {
+            position: relative; 
+        }
+       
+        #ground {
+            position: relative;
+            height: 25vh;
+            width: 100vw;
+            background-color: rgb(6, 116, 6);
+        }
+
+        #car {
+            
+            position: absolute;
+            padding-top: 66.2vh;
+            animation: car 30s linear forwards;
+        }
+        
+        #sun {
+            position: absolute;
+            animation: sun 30s linear forwards;
+        }
+
+        #cloud {
+            animation: cloud 38s linear forwards;
+        }
+
+        #raincloud {
+            animation: raincloud 30s linear forwards;
+        }
+
+        #raincloud2 {
+            animation: raincloud2 34s linear forwards;
+        }
+      
+
+ 
+        @keyframes sun {
+            0% {
+                transform: translateY(500px);
+            }
+            10% {
+                transform: 
+                translateX(200px)
+                translateY(-45px);
+            }
+         
+            100% {
+                transform: 
+                translateX(95vw)
+                translateY(50px);
+            }
+        }
+
+        @keyframes car {
+            0% {
+                transform: translateX(-60vw);
+            }
+            100% {
+                transform: translateX(50vw);
+            }
+        }
+
+        @keyframes cloud {
+            0% {
+                transform: translateX(120vw);
+            }
+            100% {
+                transform: translateX(-30vw);
+            }
+        }
+
+        @keyframes raincloud {
+            0% {
+                transform:
+                 translateX(1200px);
+                 
+            }
+            100% {
+                transform: translateX(-30vw);
+            }
+        }
+
+        @keyframes raincloud2 {
+            0% {
+                transform: translateX(1200px);
+            }
+            100% {
+                transform: translateX(-30vw);
+            }
+        }
+
+        @keyframes darkness {
+            0% {
+                opacity: 0%;
+                background-color: black;
+            }
+            25% {
+                opacity: 100%;
+            }
+            50% {
+                opacity: 100%;
+            }
+            95% {
+                opacity: 100%;
+            }
+            100% {
+                opacity: 0%;
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="moi">
+    <div class="sky">
+        <img src="./images/Sun.png" alt="sun" id="sun">
+        <img src="./images/cloud.png" alt="cloud" id="cloud">
+        <img src="./images/cloud_w_rain.png" alt="raincloud" id="raincloud">
+        <img src="./images/cloud_w_rain.png" alt="raincloud2" id="raincloud2">
+        <img src="./images/car.png" alt="car" id="car">
+        
+    </div>
+        <div id="ground">
+            
+        </div>
+    </div>
+
+    <div id="koko">   
+        <div id="foxi">
+    <div class="container">
+        <h2 id="tex1">Fox</h2>
+        <h3 class="coi"></h3>
+        <div class="block" >
+            <img src="./images/fox.jpg" alt="fox" id="fox">
+        </div>
+    </div>
+        
+    <div id="rabi">
+    <div class="container">
+        <h2 id="tex2">Rabbit</h2>
+        <h3 class="coi"></h3>
+        <div class="block" >
+            <img src="./images/rabbit.jpg" alt="rab" id="rab">
+        </div>
+    </div>
+        
+    </div>
+    <div id="hedi">
+    <div class="container">
+        <h2 id="tex3">Hedgehog</h2>
+        <h3 class="coi"></h3>
+        <div class="block" >
+            <img src="./images/hedgehog.jpg" alt="hed" id="hed">
+        </div>
+        
+    </div>
+</div>
+
+</div> 
+</div> 
+     
+    
+</body>
+
+</html>

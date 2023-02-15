@@ -1,0 +1,78 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.4)), url(../images/bg.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .brand {
+        @include centering(15%);
+        color: $color-white;
+        display: flex;
+    }
+
+    &-banner {
+        color: $color-white;
+        @include centering(50%);
+    }
+}
+
+.about-us {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+
+    &-left {
+        width: 40%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-right {
+        box-sizing: border-box;
+        width: 60%;
+        padding: 0 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (max-width: 1000px) {
+            padding: 0 25px;
+        }
+
+        .stars {
+            margin: 30px 0;
+        }
+
+        .star {
+            font-size: 15px;
+            color: $color-primary;
+            margin-left: 10px;
+        }
+
+        .description {
+            font-family: $font-Roboto;
+            font-size: 20px;
+            font-style: italic;
+            color: $color-secondary;
+            text-align: justify;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 16px;
+            }
+
+            &::first-letter {
+                padding-left: 40px;
+            }
+        }
+    }
+}
+
+.gallery {
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

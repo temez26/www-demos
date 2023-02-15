@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #303030;
+}
+
+.card-overlay, .card-img {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(../images/bg.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.header .brand {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  display: flex;
+}
+.header-banner {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-us {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.about-us-left {
+  width: 40%;
+}
+.about-us-left img {
+  width: 100%;
+}
+.about-us-right {
+  box-sizing: border-box;
+  width: 60%;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .about-us-right {
+    padding: 0 25px;
+  }
+}
+.about-us-right .stars {
+  margin: 30px 0;
+}
+.about-us-right .star {
+  font-size: 15px;
+  color: #d8ae53;
+  margin-left: 10px;
+}
+.about-us-right .description {
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  color: #ccc;
+  text-align: justify;
+}
+@media screen and (max-width: 1000px) {
+  .about-us-right .description {
+    font-size: 16px;
+  }
+}
+.about-us-right .description::first-letter {
+  padding-left: 40px;
+}
+
+.gallery .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: block;
+  font-size: 70px;
+  color: #d8ae53;
+  border: 4px solid #d8ae53;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-name {
+  font-family: "Marck Script", cursive;
+  font-size: 50px;
+  color: #ccc;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: none;
+}
+
+.sub-name {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  color: #ccc;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main-heading {
+  font-family: "Marck Script", cursive;
+  font-size: 100px;
+  font-weight: 300;
+  color: #d8ae53;
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  .main-heading {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-heading {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+.sub-heading {
+  font-family: Roboto, sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  color: #ccc;
+  margin-bottom: 80px;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  .sub-heading {
+    font-size: 37px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sub-heading {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+.main-btn {
+  font-family: Roboto, sans-serif;
+  height: 45px;
+  width: 200px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: transparent;
+  border: 1px solid #d8ae53;
+  color: #ccc;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.25s;
+}
+.main-btn:hover {
+  background-color: #d8ae53;
+  color: #303030;
+}
+@media screen and (max-width: 400px) {
+  .main-btn {
+    height: 35px;
+    width: 150px;
+  }
+}
+
+.card {
+  width: 33.3333%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    font-size: 12px;
+  }
+}
+.card:hover .card-overlay {
+  left: 0;
+}
+.card-img {
+  object-fit: cover;
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: rgba(216, 174, 83, 0.5);
+  color: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: left 0.5s;
+}
+.card-overlay-heading {
+  font-family: Raleway, sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 768px) {
+  .card-overlay-heading {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card-overlay-heading {
+    font-size: 14px;
+  }
+}
+.card-overlay-paragraph {
+  font-family: Raleway, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 30px;
+}
+@media screen and (max-width: 768px) {
+  .card-overlay-paragraph {
+    font-size: 12px;
+    margin: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card-overlay-paragraph {
+    font-size: 10px;
+  }
+}
+.card-overlay-btn {
+  width: 150px;
+  height: 40px;
+  color: #d8ae53;
+  background-color: #fff;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #d8ae53;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .card-overlay-btn {
+    width: 100px;
+    height: 33px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card-overlay-btn {
+    width: 90px;
+    height: 30px;
+    font-size: 10px;
+  }
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-social-media {
+  position: relative;
+  right: 50%;
+}
+@media screen and (max-width: 1000px) {
+  .footer-social-media {
+    position: relative;
+    left: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer-social-media {
+    position: relative;
+    left: 38%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .footer-social-media {
+    position: relative;
+    left: 34%;
+  }
+}
+@media screen and (max-width: 423px) {
+  .footer-social-media {
+    position: relative;
+    left: 30%;
+  }
+}
+@media screen and (max-width: 370px) {
+  .footer-social-media {
+    position: relative;
+    left: 28%;
+  }
+}
+@media screen and (max-width: 356px) {
+  .footer-social-media {
+    position: relative;
+    left: 25%;
+  }
+}
+@media screen and (max-width: 337px) {
+  .footer-social-media {
+    position: relative;
+    left: 22%;
+  }
+}
+.footer-copyright {
+  position: relative;
+  top: 120px;
+  right: 420px;
+}
+@media screen and (max-width: 800px) {
+  .footer-copyright {
+    position: relative;
+    top: 125px;
+    right: 380px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .footer-copyright {
+    position: relative;
+    top: 130px;
+    right: 330px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-copyright {
+    position: relative;
+    top: 130px;
+    right: 290px;
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer-copyright {
+    position: relative;
+    top: 130px;
+    right: 240px;
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .footer-copyright {
+    position: relative;
+    top: 135px;
+    right: 240px;
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer-copyright {
+    position: relative;
+    top: 135px;
+    right: 220px;
+    font-size: 9px;
+  }
+}
+
+.fab {
+  padding: 10px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px;
+  border-radius: 25%;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-facebook-square {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-google-plus-square {
+  background: #dd4b39;
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
