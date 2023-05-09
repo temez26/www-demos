@@ -15,4 +15,4 @@ This project is an adventure game where the player moves in a 3x3 matrix and com
 ### Project 4: Visualizing temperature sensor data on a website and console
 This project involves visualizing temperature sensor data as a graph on a website, and displaying the data in the console.
 
-Each project is located in a separate folder in this repository. Please refer to each project's README file for more information about that project.
+Each project is located in a separate folder in this repository. 
